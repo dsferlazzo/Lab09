@@ -12,6 +12,9 @@ public class TestDAO {
 		BordersDAO dao = new BordersDAO();
 
 		System.out.println("Lista di tutte le nazioni:");
-		List<Country> countries = dao.loadAllCountries();
+		//List<Country> countries = dao.loadAllCountries();
+		List<Country> countries = dao.getCountriesWithBorders(1980);
+		for(Country c : countries)
+			System.out.println(c.getStateNme());
 	}
 }
